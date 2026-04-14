@@ -18,6 +18,7 @@ async function main() {
     ".txt": (path) => new TextLoader(path),
     ".md": (path) => new TextLoader(path),
     ".docx": (path) => new DocxLoader(path),
+    ".sql": (path) => new TextLoader(path), // ← เพิ่มแค่นี้
   });
   const docs = await loader.load();
   console.log(`✅ โหลดได้ ${docs.length} เอกสาร`);
